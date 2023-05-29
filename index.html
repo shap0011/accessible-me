@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -29,6 +29,8 @@
     - use <label> instead <b> - done;
     - use <p> inside <footer> - done;
     - use <span> for address elements inside <p> - done;
+    - add associated labels to the form elements - done;
+    - use <h2> heading inside <main> as only one <h1> heading element allowed on the web page - done;
   - <footer> - done; -->
 
 <body>
@@ -60,11 +62,11 @@
     <!-- Use semantic tag <main> with class 'main-content' instead non-semantic tag <div> -->
     <!-- Add ARIA role 'main' to improve accessibility -->
     <main id="main" class="main-content" role="main">
-      <!-- Use semantic tag <section> with class 'welcome' to wrap up elements <h1> and <p> -->
+      <!-- Use semantic tag <section> with class 'welcome' to wrap up elements <h2> and <p> -->
       <!-- Add ARIA role 'region' to improve accessibility -->
       <section class="welcome" role="region">
         <!-- Add ARIA role 'heading' to improve accessibility -->
-        <h1 role="heading">Welcome to Jam Box</h1>
+        <h2 role="heading">Welcome to Jam Box</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa
           eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio
           quia veritatis.</p>
@@ -76,23 +78,22 @@
       <!-- Add ARIA role 'region' to improve accessibility -->
       <section class="owner" role="region">
         <!-- Add ARIA role 'heading' to improve accessibility -->
-        <h1 role="heading">Meet the owner</h1>
+        <h2 role="heading">Meet the owner</h2>
         <!-- Add ARIA role 'list' to improve accessibility -->
         <!-- Add Schema Information 'itemscope' and 'itemtype' -->
-        <ul role="list" itemscope itemtype="https://schema.org/Person">
+        <ul itemscope itemtype="https://schema.org/Person" role="list">
           <!-- Add ARIA role 'listitem' to improve accessibility -->
           <!-- Add properties of an item to definin using the microdata -->
-          <li role="listitem" itemprop="name">Name: John Doe</li>
-          <li role="listitem" itemprop="jobTitle">Title: CEO</li>
-          <li role="listitem" itemprop="email">Email: johnjoe@jambox.ca</li>
-          <li role="listitem" itemprop="telephone">Phone: 613-000-0000</li>
+          <li itemprop="name" role="listitem">Name: John Doe</li>
+          <li itemprop="jobTitle" role="listitem">Title: CEO</li>
+          <li itemprop="email" role="listitem">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone" role="listitem">Phone: 613-000-0000</li>
         </ul>
-        <!-- Add <aside> element with class 'address' and use it as a container to group <h1> and <p> elements -->
+        <!-- Add <aside> element with class 'address' and use it as a container to group <h2> and <p> elements -->
         <!-- Add ARIA role 'complementary' to designate a supporting section that relates to the main content and improve accessibility -->
-        <!-- Add extended description to <aside> with 'area-details' property -->
-        <aside class="address" role="complementary"  aria-details="owneraddress">
+        <aside class="address" role="complementary">
           <!-- Add ARIA role 'heading' to improve accessibility -->
-          <h1 role="heading">Address</h1>
+          <h2 role="heading">Address</h2>
           <!-- Add Schema Information 'itemscope' and 'itemtype' -->
           <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             <!-- Add properties of an item to definin using the microdata -->
@@ -107,18 +108,20 @@
       <!-- Add ARIA role 'region' to improve accessibility -->
       <section class="contact-section" role="region">
         <!-- Add ARIA role 'heading' to improve accessibility -->
-        <h1 role="heading">Contact Us</h1>
+        <h2 role="heading">Contact Us</h2>
         <!-- Add ARIA role 'form' to improve accessibility -->
         <form action="thanks.html" role="form">
-          <label>Full Name</label>
+          <label for="fullname">Full Name</label>
           <!-- Add ARIA role 'textbox' to improve accessibility -->
-          <input type="text" placeholder="Full Name" role="textbox">
-          <input type="text" placeholder="Email" role="textbox">
-          <input type="text" placeholder="Subject" role="textbox">
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name" role="textbox">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Email" role="textbox">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" role="textbox">
           <!-- Use <label> as a part of a group af tags that are used to create data entry form (instead non-semantic tag <b>) -->
-          <label>Your Message</label>
+          <label for="message">Your Message</label>
           <!-- Add ARIA role 'textbox' to improve accessibility -->
-          <textarea role="textarea"></textarea>
+          <textarea id="message" name="message" role="textbox"></textarea>
           <!-- Add ARIA role 'button' to improve accessibility -->
           <button type="submit" role="button">Send</button>
         </form>

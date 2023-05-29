@@ -81,7 +81,7 @@ Fix any HTML Semantic Issues - done
 Fix any contrast issues - done
 Add skip links - done
 Add ARIA Roles - done
-Add Schema Information where applicable */
+Add Schema Information where applicable - done */
 
 /* ---------------------------------------------------------------- */
 
@@ -109,15 +109,14 @@ Web site fonts size:
 
 Large Text: 
 Heading <h1> - 32px, or 24pt;
-Heading <h1> - 24px, or 18pt;
-Heading <h1> - 18.72px, or 14.04pt (bold);
+Heading <h2> - 24px, or 18pt;
 
 Normal Text: 
 Paragraph <p> - 16px, or 12pt;
 Link <a> - 20px, or 15pt;
 Label <label> - 16px, or 12pt;
 Button <button> - 13.3333px, or 10pt;
-Footer <footer> - 16px, or 12pt;
+Footer paragraph <p> - 16px, or 12pt;
 
 To fix the accessibility contrast issue increase the background color lightness
 
