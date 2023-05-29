@@ -1,3 +1,4 @@
+/* base css */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: grey;
@@ -69,3 +70,21 @@ form button {
 .site-footer {
   padding: 2rem 0;
 }
+
+/* Using your knowledge of accessibility and the concepts 
+discussed in the class fix the accessibility issues 
+and enhance the accessibility of the given HTML and CSS.
+
+Fix any HTML Semantic Issues - done
+Fix any contrast issues
+Add skip links
+Add ARIA Roles
+Add Schema Information where applicable */
+
+/* Fix any contrast issue: 
+Use WAVE Chrome extension to test contrast.
+ */
+
+ /* img {
+  display: none;
+ } */
