@@ -1,7 +1,7 @@
 /* base css */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #808080;
   margin: 0;
   padding: 0;
 }
@@ -71,20 +71,97 @@ form button {
   padding: 2rem 0;
 }
 
+/* ---------------------------------------------------------------- */
+
 /* Using your knowledge of accessibility and the concepts 
 discussed in the class fix the accessibility issues 
 and enhance the accessibility of the given HTML and CSS.
 
 Fix any HTML Semantic Issues - done
-Fix any contrast issues
-Add skip links
-Add ARIA Roles
+Fix any contrast issues - done
+Add skip links - done
+Add ARIA Roles - done
 Add Schema Information where applicable */
 
+/* ---------------------------------------------------------------- */
+
 /* Fix any contrast issue: 
-Use WAVE Chrome extension to test contrast.
+
+Use WAVE Chrome extension to test contrast: 
+
+- Foreground Color - #000000, 
+- Background Color - #808080
+
+Contrast Ratio: 5.31:1 
+
+Normal Text:
+Minimum contrast (AA): Pass
+Enhanced contrast (AAA): Fail
+
+Large Text:
+Minimum contrast (AA): Pass
+Enhanced contrast (AAA): Pass
+
+Larger text is defined as at least 18pt, or 14pt bold
+(https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+
+Web site fonts size:
+
+Large Text: 
+Heading <h1> - 32px, or 24pt;
+Heading <h1> - 24px, or 18pt;
+Heading <h1> - 18.72px, or 14.04pt (bold);
+
+Normal Text: 
+Paragraph <p> - 16px, or 12pt;
+Link <a> - 20px, or 15pt;
+Label <label> - 16px, or 12pt;
+Button <button> - 13.3333px, or 10pt;
+Footer <footer> - 16px, or 12pt;
+
+To fix the accessibility contrast issue increase the background color lightness
+
+Enhanced contrast (AAA):
+Text and its background should have a contrast ratio of at least 7:1
+Background Color GRAY #969696 and Foreground Color BLACK #000000 have a contrast ratio 7.09:1
  */
 
- /* img {
+/* img {
   display: none;
  } */
+
+body {
+  background-color: #969696;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* Add skip-links */
+
+/* Style list items of class .skip-links: 
+- set 'list-style' property to 'none' value to remove the bullets,
+- set margins and paddings to 0  */
+.skip-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide links with position:absolute and top: -3em;
+style the skip links with background-color 'white', font-weight 'bold',
+paddings top and bottom .4em, and paddings left and right 1em */
+.skip-links a {
+  position: absolute;
+  top: -3em;
+  background-color: white;
+  padding: .4em 1em;
+  font-weight: bold;
+}
+
+/* make links visible on focus (click on page + press Tab keyboard button) 
+with 'top' property set to 0*/
+.skip-links a:focus {
+  top: 0;
+}
+
+/* ---------------------------------------------------------------- */

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Lighthouse -> Analize 
 -> SEO -> add <meta> description
-       -> add [alt] attribute to the image --> 
+       -> add [alt] attribute to the image -->
   <meta name="description" content="assignment 3 by Olga Durham">
   <title>Accessible Me</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,28 +25,46 @@
     - <section class="welcome"> - done,
     - <section class="owner"> - done,
     - <section class="contact-section"> - done;
+    - <aside class="address"> - done;
+    - use <label> instead <b> - done;
+    - use <p> inside <footer> - done;
+    - use <span> for address elements inside <p> - done;
   - <footer> - done; -->
+
 <body>
   <div class="container">
-    <!-- Use semantic tag <header> with class 'site-header' instead non-semantic tag <div> -->
-    <header class="site-header">
-      <h1>Jam Box Studios</h1>
-      <!-- Use semantic tag <nav> with class 'main-nav' instead non-semantic tag <div> -->
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+    <!-- Add skip-links -->
+    <ul class="skip-links">
+      <li><a href="#nav">Skip to main nav</a></li>
+      <li><a href="#main">Skip to main content</a></li>
+    </ul>
+    <!-- Use semantic tag <header> with class 'site-header' instead non-semantic tag <div>, add ARIA role 'navigation' -->
+    <header class="site-header" role="banner">
+      <!-- Add ARIA role 'heading' to improve accessibility -->
+      <h1 role="heading">Jam Box Studios</h1>
+      <!-- Use semantic tag <nav> with class 'main-nav' instead non-semantic tag <div>, add ARIA role 'navigation' -->
+      <nav id="nav" class="main-nav" role="navigation">
+        <!-- Add ARIA role 'menubar' to improve accessibility -->
+        <ul role="menubar">
+          <!-- Add ARIA role 'menuitem' to improve accessibility -->
+          <!-- Use ARIA to add a label to the anchor tags -->
+          <li role="menuitem"><a href="#" aria-label="Redirect to 'Home' page">Home</a></li>
+          <li role="menuitem"><a href="#" aria-label="Redirect to 'Products' page">Products</a></li>
+          <li role="menuitem"><a href="#" aria-label="Redirect to 'Reservation' page">Reservation</a></li>
+          <li role="menuitem"><a href="#" aria-label="Redirect to 'Studio' page">Studio</a></li>
         </ul>
       </nav>
-      <img src="https://placekitten.com/1200/900" class="banner" alt="A kitten">
+      <!-- Add ARIA role 'img' to improve accessibility -->
+      <img src="https://placekitten.com/1200/900" class="banner" alt="A kitten" role="img">
     </header>
     <!-- Use semantic tag <main> with class 'main-content' instead non-semantic tag <div> -->
-    <main class="main-content">
+    <!-- Add ARIA role 'main' to improve accessibility -->
+    <main id="main" class="main-content" role="main">
       <!-- Use semantic tag <section> with class 'welcome' to wrap up elements <h1> and <p> -->
-      <section class="welcome">
-        <h1>Welcome to Jam Box</h1>
+      <!-- Add ARIA role 'region' to improve accessibility -->
+      <section class="welcome" role="region">
+        <!-- Add ARIA role 'heading' to improve accessibility -->
+        <h1 role="heading">Welcome to Jam Box</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa
           eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio
           quia veritatis.</p>
@@ -55,39 +73,60 @@
           error voluptatibus.</p>
       </section>
       <!-- Use semantic tag <section> with class 'owner' instead non-semantic tag <div> -->
-      <section class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+      <!-- Add ARIA role 'region' to improve accessibility -->
+      <section class="owner" role="region">
+        <!-- Add ARIA role 'heading' to improve accessibility -->
+        <h1 role="heading">Meet the owner</h1>
+        <!-- Add ARIA role 'list' to improve accessibility -->
+        <!-- Add Schema Information 'itemscope' and 'itemtype' -->
+        <ul role="list" itemscope itemtype="https://schema.org/Person">
+          <!-- Add ARIA role 'listitem' to improve accessibility -->
+          <!-- Add properties of an item to definin using the microdata -->
+          <li role="listitem" itemprop="name">Name: John Doe</li>
+          <li role="listitem" itemprop="jobTitle">Title: CEO</li>
+          <li role="listitem" itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li role="listitem" itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </sect>
+        <!-- Add <aside> element with class 'address' and use it as a container to group <h1> and <p> elements -->
+        <!-- Add ARIA role 'complementary' to designate a supporting section that relates to the main content and improve accessibility -->
+        <!-- Add extended description to <aside> with 'area-details' property -->
+        <aside class="address" role="complementary"  aria-details="owneraddress">
+          <!-- Add ARIA role 'heading' to improve accessibility -->
+          <h1 role="heading">Address</h1>
+          <!-- Add Schema Information 'itemscope' and 'itemtype' -->
+          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <!-- Add properties of an item to definin using the microdata -->
+            <span itemprop="areaServed">Jambox Studios</span>
+            <span itemprop="streetAddress">123 Guitar Road,</span>
+            <span itemprop="addressRegion">Musicville, Danceistan</span>
+            <span itemprop="postalCode">B3T 0L0</span>
+          </p>
+        </aside>
+      </section>
       <!-- Use semantic tag <section> with class 'contact-section' instead non-semantic tag <div> -->
-      <section class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
+      <!-- Add ARIA role 'region' to improve accessibility -->
+      <section class="contact-section" role="region">
+        <!-- Add ARIA role 'heading' to improve accessibility -->
+        <h1 role="heading">Contact Us</h1>
+        <!-- Add ARIA role 'form' to improve accessibility -->
+        <form action="thanks.html" role="form">
           <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
+          <!-- Add ARIA role 'textbox' to improve accessibility -->
+          <input type="text" placeholder="Full Name" role="textbox">
+          <input type="text" placeholder="Email" role="textbox">
+          <input type="text" placeholder="Subject" role="textbox">
+          <!-- Use <label> as a part of a group af tags that are used to create data entry form (instead non-semantic tag <b>) -->
+          <label>Your Message</label>
+          <!-- Add ARIA role 'textbox' to improve accessibility -->
+          <textarea role="textarea"></textarea>
+          <!-- Add ARIA role 'button' to improve accessibility -->
+          <button type="submit" role="button">Send</button>
         </form>
       </section>
     </main>
-    <!-- Use semantic tag <footer> with class 'site-footer' instead non-semantic tag <div> -->
-    <footer class="site-footer">
-      &copy; 2021 Jam Box Studios
+    <!-- Use semantic tag <footer> with class 'site-footer' instead non-semantic tag <div>, add ARIA role 'content-info'-->
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; 2021 Jam Box Studios</p>
     </footer>
   </div>
 </body>
