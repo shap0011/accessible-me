@@ -165,11 +165,11 @@ form button:hover {
     box-sizing: border-box;
     background-image: linear-gradient(#b4845c, #6b2f2f, #e2d5c7);
     color: white;
-    font-size: 1.5em;
+    /* font-size: 1.5em;
     padding: .32em 0;
     border: 3px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #ed62c8, #4f4df2);
+    border-image-source: linear-gradient(to left, #ed62c8, #4f4df2); */
 }
 
 footer p {
