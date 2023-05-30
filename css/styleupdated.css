@@ -4,120 +4,120 @@
 .header__wrapper {
     background: hsl(0, 0%, 20%, .1);
     padding: 2em;
-  }
-  
-  body {
+}
+
+body {
     background-image: linear-gradient(to bottom right, #ff00bb, #ed62c8, white, #4f4df2, #0400ff);
-  }
-  
-  .nav__heading {
+}
+
+.nav__heading {
     margin: 0;
     padding: .25em 0;
     width: 30%;
     text-align: center;
     background-image: linear-gradient(#b5aa9f, #efd1ce, #876243);
-  }
-  
-  .nav__heading:hover {
+}
+
+.nav__heading:hover {
     font-size: 35.6px;
     font-size: 40px;
     color: white;
     padding: .07em 0;
-  }
-  
-  .main-nav {
+}
+
+.main-nav {
     margin: 0;
     width: 70%;
-  }
-  
-  .nav__wrapper {
+}
+
+.nav__wrapper {
     display: flex;
     align-items: center;
-  }
-  
-  .main-nav a {
+}
+
+.main-nav a {
     background-image: linear-gradient(#e2d5c7, white, #b4845c);
     padding: .8em 0;
     border-left: 1px solid #b4845c;
-  }
-  
-  .main-nav a:hover {
+}
+
+.main-nav a:hover {
     box-sizing: border-box;
     background-image: linear-gradient(#b4845c, #6b2f2f, #e2d5c7);
     color: white;
-  }
-  
-  img {
+}
+
+img {
     display: block;
     width: 70%;
     margin: 2em auto;
     box-sizing: border-box;
     border: 10px solid;
     border-color: transparent;
-  }
-  
-  img:hover {
+}
+
+img:hover {
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, #ed62c8, white, white, #4f4df2, #4f4df2, #4f4df2);
-  }
-  
-  .main__wrapper {
+}
+
+.main__wrapper {
     background: hsl(5, 51%, 87%, .2);
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-      "w w"
-      "o c"
-      "o c"
-      ;
+        "w w"
+        "o c"
+        "o c"
+    ;
     gap: 15px;
     padding: 2em;
     padding-top: 0;
-  }
-  
-  form {
+}
+
+form {
     width: 70%;
-  }
-  
-  .grid-item:nth-child(1) {
+}
+
+.grid-item:nth-child(1) {
     grid-area: w;
-  }
-  
-  .grid-item:nth-child(2) {
+}
+
+.grid-item:nth-child(2) {
     grid-area: o;
-  }
-  
-  .grid-item:nth-child(3) {
+}
+
+.grid-item:nth-child(3) {
     grid-area: c;
-  }
-  
-  .address p {
+}
+
+.address p {
     display: grid;
-  }
-  
-  .address p span {
+}
+
+.address p span {
     padding-left: 1.5em;
-  }
-  
-  .welcome,
-  .owner {
+}
+
+.welcome,
+.owner {
     line-height: 2;
     vertical-align: text-top;
-  }
-  
-  textarea {
+}
+
+textarea {
     font-family: 'Roboto', Helvetica, sans-serif;
-  }
-  
-  input:focus,
-  textarea:focus {
+}
+
+input:focus,
+textarea:focus {
     background: hsla(60, 84%, 86%);
     width: 120%;
-  }
-  
-  input:required:focus:valid,
-  textarea:required:focus:valid {
+}
+
+input:required:focus:valid,
+textarea:required:focus:valid {
     /* background: #076f19; */
     background: #4f4df2;
     width: 120%;
@@ -125,33 +125,33 @@
     font-size: 1.2em;
     padding-top: 4px;
     padding-bottom: 4px;
-  }
-  
-  input:focus:invalid,
-  textarea:focus:invalid {
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
     /* background: #aa1a1a; */
     background: #ff00bb;
     color: white;
     font-size: 1.2em;
     padding-top: 4px;
     padding-bottom: 4px;
-  }
-  
-  textarea:required:focus:valid,
-  textarea:focus:invalid {
+}
+
+textarea:required:focus:valid,
+textarea:focus:invalid {
     font-size: 1.5em;
-  }
-  
-  .owner {
+}
+
+.owner {
     padding-left: 4.5em;
-  }
-  
-  .contact-section {
+}
+
+.contact-section {
     position: relative;
     top: .5em;
-  }
-  
-  form button {
+}
+
+form button {
     width: 30%;
     font-weight: bold;
     font-size: 1.1em;
@@ -159,9 +159,9 @@
     padding: .8em 0;
     border-left: 1px solid #b4845c;
     border: none;
-  }
-  
-  form button:hover {
+}
+
+form button:hover {
     box-sizing: border-box;
     background-image: linear-gradient(#b4845c, #6b2f2f, #e2d5c7);
     color: white;
@@ -170,14 +170,13 @@
     border: 3px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, #ed62c8, #4f4df2);
-  }
-  
-  footer p {
+}
+
+footer p {
     background: hsl(0, 0%, 20%, .1);
     padding: 2em;
-  }
-  
-  footer.site-footer {
+}
+
+footer.site-footer {
     padding: 0;
-  }
-  
+}
