@@ -42,90 +42,105 @@
     </ul>
     <!-- Use semantic tag <header> with class 'site-header' instead non-semantic tag <div>, add ARIA role 'navigation' -->
     <header class="site-header" role="banner">
-      <!-- Add ARIA role 'heading' to improve accessibility -->
-      <h1 role="heading">Jam Box Studios</h1>
-      <!-- Use semantic tag <nav> with class 'main-nav' instead non-semantic tag <div>, add ARIA role 'navigation' -->
-      <nav id="nav" class="main-nav" role="navigation">
-        <!-- Add ARIA role 'menubar' to improve accessibility -->
-        <ul role="menubar">
-          <!-- Add ARIA role 'menuitem' to improve accessibility -->
-          <!-- Use ARIA to add a label to the anchor tags -->
-          <li role="menuitem"><a href="#" aria-label="Redirect to 'Home' page">Home</a></li>
-          <li role="menuitem"><a href="#" aria-label="Redirect to 'Products' page">Products</a></li>
-          <li role="menuitem"><a href="#" aria-label="Redirect to 'Reservation' page">Reservation</a></li>
-          <li role="menuitem"><a href="#" aria-label="Redirect to 'Studio' page">Studio</a></li>
-        </ul>
-      </nav>
-      <!-- Add ARIA role 'img' to improve accessibility -->
-      <img src="https://placekitten.com/1200/900" class="banner" alt="A kitten" role="img">
+      <div class="header__wrapper">
+        <div class="nav__wrapper">
+          <!-- Add ARIA role 'heading' to improve accessibility -->
+          <h1 class="nav__heading" role="heading">Jam Box Studios</h1>
+          <!-- Use semantic tag <nav> with class 'main-nav' instead non-semantic tag <div>, add ARIA role 'navigation' -->
+          <nav id="nav" class="main-nav" role="navigation">
+            <!-- Add ARIA role 'menubar' to improve accessibility -->
+            <ul role="menubar">
+              <!-- Add ARIA role 'menuitem' to improve accessibility -->
+              <!-- Use ARIA to add a label to the anchor tags -->
+              <li role="menuitem"><a href="#" aria-label="Redirect to 'Home' page">Home</a></li>
+              <li role="menuitem"><a href="#" aria-label="Redirect to 'Products' page">Products</a></li>
+              <li role="menuitem"><a href="#" aria-label="Redirect to 'Reservation' page">Reservation</a></li>
+              <li role="menuitem"><a href="#" aria-label="Redirect to 'Studio' page">Studio</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Add ARIA role 'img' to improve accessibility -->
+        <img src="https://placekitten.com/1200/900" class="banner" alt="A kitten" role="img">
+      </div>
     </header>
     <!-- Use semantic tag <main> with class 'main-content' instead non-semantic tag <div> -->
     <!-- Add ARIA role 'main' to improve accessibility -->
     <main id="main" class="main-content" role="main">
-      <!-- Use semantic tag <section> with class 'welcome' to wrap up elements <h2> and <p> -->
-      <!-- Add ARIA role 'region' to improve accessibility -->
-      <section class="welcome" role="region">
-        <!-- Add ARIA role 'heading' to improve accessibility -->
-        <h2 role="heading">Welcome to Jam Box</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa
-          eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio
-          quia veritatis.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam
-          omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto
-          error voluptatibus.</p>
-      </section>
-      <!-- Use semantic tag <section> with class 'owner' instead non-semantic tag <div> -->
-      <!-- Add ARIA role 'region' to improve accessibility -->
-      <section class="owner" role="region">
-        <!-- Add ARIA role 'heading' to improve accessibility -->
-        <h2 role="heading">Meet the owner</h2>
-        <!-- Add ARIA role 'list' to improve accessibility -->
-        <!-- Add Schema Information 'itemscope' and 'itemtype' -->
-        <ul itemscope itemtype="https://schema.org/Person" role="list">
-          <!-- Add ARIA role 'listitem' to improve accessibility -->
-          <!-- Add properties of an item to definin using the microdata -->
-          <li itemprop="name" role="listitem">Name: John Doe</li>
-          <li itemprop="jobTitle" role="listitem">Title: CEO</li>
-          <li itemprop="email" role="listitem">Email: johnjoe@jambox.ca</li>
-          <li itemprop="telephone" role="listitem">Phone: 613-000-0000</li>
-        </ul>
-        <!-- Add <aside> element with class 'address' and use it as a container to group <h2> and <p> elements -->
-        <!-- Add ARIA role 'complementary' to designate a supporting section that relates to the main content and improve accessibility -->
-        <aside class="address" role="complementary">
-          <!-- Add ARIA role 'heading' to improve accessibility -->
-          <h2 role="heading">Address</h2>
-          <!-- Add Schema Information 'itemscope' and 'itemtype' -->
-          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <!-- Add properties of an item to definin using the microdata -->
-            <span itemprop="areaServed">Jambox Studios</span>
-            <span itemprop="streetAddress">123 Guitar Road,</span>
-            <span itemprop="addressRegion">Musicville, Danceistan</span>
-            <span itemprop="postalCode">B3T 0L0</span>
-          </p>
-        </aside>
-      </section>
-      <!-- Use semantic tag <section> with class 'contact-section' instead non-semantic tag <div> -->
-      <!-- Add ARIA role 'region' to improve accessibility -->
-      <section class="contact-section" role="region">
-        <!-- Add ARIA role 'heading' to improve accessibility -->
-        <h2 role="heading">Contact Us</h2>
-        <!-- Add ARIA role 'form' to improve accessibility -->
-        <form action="thanks.html" role="form">
-          <label for="fullname">Full Name</label>
-          <!-- Add ARIA role 'textbox' to improve accessibility -->
-          <input type="text" id="fullname" name="fullname" placeholder="Full Name" role="textbox">
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Email" role="textbox">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject" role="textbox">
-          <!-- Use <label> as a part of a group af tags that are used to create data entry form (instead non-semantic tag <b>) -->
-          <label for="message">Your Message</label>
-          <!-- Add ARIA role 'textbox' to improve accessibility -->
-          <textarea id="message" name="message" role="textbox"></textarea>
-          <!-- Add ARIA role 'button' to improve accessibility -->
-          <button type="submit" role="button">Send</button>
-        </form>
-      </section>
+      <div class="main__wrapper">
+        <div class="grid-item welcome__wrapper">
+          <!-- Use semantic tag <section> with class 'welcome' to wrap up elements <h2> and <p> -->
+          <!-- Add ARIA role 'region' to improve accessibility -->
+          <section class="welcome" role="region">
+            <!-- Add ARIA role 'heading' to improve accessibility -->
+            <h2 role="heading">Welcome to Jam Box</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa
+              eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis
+              optio
+              quia veritatis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit
+              ipsam
+              omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate
+              iusto
+              error voluptatibus.</p>
+          </section>
+        </div>
+        <div class=" grid-item owner__wrapper">
+          <!-- Use semantic tag <section> with class 'owner' instead non-semantic tag <div> -->
+          <!-- Add ARIA role 'region' to improve accessibility -->
+          <section class="owner" role="region">
+            <!-- Add ARIA role 'heading' to improve accessibility -->
+            <h2 role="heading">Meet the owner</h2>
+            <!-- Add ARIA role 'list' to improve accessibility -->
+            <!-- Add Schema Information 'itemscope' and 'itemtype' -->
+            <ul itemscope itemtype="https://schema.org/Person" role="list">
+              <!-- Add ARIA role 'listitem' to improve accessibility -->
+              <!-- Add properties of an item to definin using the microdata -->
+              <li itemprop="name" role="listitem">Name: John Doe</li>
+              <li itemprop="jobTitle" role="listitem">Title: CEO</li>
+              <li itemprop="email" role="listitem">Email: johnjoe@jambox.ca</li>
+              <li itemprop="telephone" role="listitem">Phone: 613-000-0000</li>
+            </ul>
+            <!-- Add <aside> element with class 'address' and use it as a container to group <h2> and <p> elements -->
+            <!-- Add ARIA role 'complementary' to designate a supporting section that relates to the main content and improve accessibility -->
+            <aside class="address" role="complementary">
+              <!-- Add ARIA role 'heading' to improve accessibility -->
+              <h2 role="heading">Address</h2>
+              <!-- Add Schema Information 'itemscope' and 'itemtype' -->
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <!-- Add properties of an item to definin using the microdata -->
+                <span itemprop="areaServed">Jambox Studios</span>
+                <span itemprop="streetAddress">123 Guitar Road,</span>
+                <span itemprop="addressRegion">Musicville, Danceistan</span>
+                <span itemprop="postalCode">B3T 0L0</span>
+              </p>
+            </aside>
+          </section>
+        </div>
+        <div class="grid-item contact__wrapper">
+          <!-- Use semantic tag <section> with class 'contact-section' instead non-semantic tag <div> -->
+          <!-- Add ARIA role 'region' to improve accessibility -->
+          <section class="contact-section" role="region">
+            <!-- Add ARIA role 'heading' to improve accessibility -->
+            <h2 role="heading">Contact Us</h2>
+            <!-- Add ARIA role 'form' to improve accessibility -->
+            <form action="thanks.html" role="form">
+              <label for="fullname">Full Name</label>
+              <!-- Add ARIA role 'textbox' to improve accessibility -->
+              <input type="text" id="fullname" name="fullname" placeholder="Full Name" role="textbox" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" role="textbox" required>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject" role="textbox" required>
+              <!-- Use <label> as a part of a group af tags that are used to create data entry form (instead non-semantic tag <b>) -->
+              <label for="message">Your Message</label>
+              <!-- Add ARIA role 'textbox' to improve accessibility -->
+              <textarea id="message" name="message" role="textbox" required></textarea>
+              <!-- Add ARIA role 'button' to improve accessibility -->
+              <button type="submit" role="button">Send</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </main>
     <!-- Use semantic tag <footer> with class 'site-footer' instead non-semantic tag <div>, add ARIA role 'content-info'-->
     <footer class="site-footer" role="contentinfo">
