@@ -1,16 +1,30 @@
 /* User Experience and Design */
 
-
+/* style header with see-through gray underlay 
+with opacity 10% and padding 2em */
 .header__wrapper {
     background: hsl(0, 0%, 20%, .1);
     padding: 2em;
 }
 
+/* style body with 'bacground-image' property 
+set to linear-gradient, to bottom right direction */
 body {
     background-image: linear-gradient(to bottom right, #ff00bb, #ed62c8, white, #4f4df2, #0400ff);
 }
 
-.nav__heading {
+/* display elements inside 'nav__wrapper' block beside each other
+with property 'display' set to value 'flex' */
+.nav__wrapper {
+    display: flex;
+}
+
+/* style header's heading <h1> with 'background-image' 
+set to vertical direction linear-gradient and with three colors,
+define 'width' with value 30%, top and bottom paddings .25em,
+margins and left and right paddings set to 0,
+alight the text to center  */
+.header__heading {
     margin: 0;
     padding: .25em 0;
     width: 30%;
@@ -18,35 +32,46 @@ body {
     background-image: linear-gradient(#b5aa9f, #efd1ce, #876243);
 }
 
-.nav__heading:hover {
-    font-size: 35.6px;
+/* use ':hover' selector to change style when mouse is over <h1> element
+   set 'font-size' to 40px, 'color' to 'white', top and bottom padding set to '.07em*/
+.header__heading:hover {
     font-size: 40px;
     color: white;
     padding: .07em 0;
 }
 
+/* set 'width' property of the navigation bar <nav> to 70%
+and its margins to 0 */
 .main-nav {
     margin: 0;
     width: 70%;
 }
 
-.nav__wrapper {
-    display: flex;
-    align-items: center;
-}
-
+/* style bar navigation links with padding top and bottom set to .8em, 
+left and right padding set to 0, 'bacground-image' property 
+set to linear gradient with three colors. Add 1px solid border-left. 
+Add property 'box-sizing' and set it to 'border-box' value */
 .main-nav a {
+    box-sizing: border-box;
     background-image: linear-gradient(#e2d5c7, white, #b4845c);
     padding: .8em 0;
     border-left: 1px solid #b4845c;
 }
 
+/* change navigation links style on hover:
+- new colors for 'linear-gradient' value of the 'background-image' property;
+- set font color to 'white*/
 .main-nav a:hover {
-    box-sizing: border-box;
     background-image: linear-gradient(#b4845c, #6b2f2f, #e2d5c7);
     color: white;
 }
 
+/* style the image:
+- center the image, 
+- reduce the image width to 70%,
+- add transparent border with 10px width, solid,
+- add 'display' property set to 'block' value,
+- add 'box-sizing' property set to 'border-box' value */
 img {
     display: block;
     width: 70%;
@@ -56,30 +81,44 @@ img {
     border-color: transparent;
 }
 
+/* change the image border style on hover:
+- add 'border-image-slice' property and set its value to '1',
+- add 'border-image-source' property and set its value to 'linear-gradient' to left and six colors */
 img:hover {
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, #ed62c8, white, white, #4f4df2, #4f4df2, #4f4df2);
 }
 
+/* style <main>:
+- create visual underlay with 'background' property set to 'beige' color with opacity 10%;
+- create grid with two columns of 35% and 65% widths and with three rows;
+- add gap 15px;
+- add left, bottom, right paddings with 2em of widths;
+- padding-top set to 0;
+- add 'grid-template-areas' property, where values are:
+  - grid-area: w - for section with class 'welcome';
+  - grid-area: o - for section with class 'owner';
+  - grid-area: c - for section with class 'contact-section'; */
 .main__wrapper {
-    background: hsl(5, 51%, 87%, .2);
+    background: hsl(5, 51%, 87%, .1);
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
         "w w"
         "o c"
-        "o c"
-    ;
+        "o c";
     gap: 15px;
     padding: 2em;
     padding-top: 0;
 }
 
+/* reduce <form> width to 70% */
 form {
     width: 70%;
 }
 
+/* set 'grid-area' property to each of the grid-items */
 .grid-item:nth-child(1) {
     grid-area: w;
 }
@@ -92,91 +131,119 @@ form {
     grid-area: c;
 }
 
+/* display paragraph <p> with <span> elements as a column:
+- use 'display' property set to 'grid' value */
 .address p {
     display: grid;
 }
 
+/* shift span elements to left for 1.5em */
 .address p span {
     padding-left: 1.5em;
 }
 
+/* style sections of classes 'welcome' and 'owner */
 .welcome,
 .owner {
     line-height: 2;
     vertical-align: text-top;
 }
 
+/* use same font-family for text-area as for all other text of the web page */
 textarea {
     font-family: 'Roboto', Helvetica, sans-serif;
 }
 
+/* increase on focus input and text-area widths to 120%, and font-size to 1.2em,
+change text color to 'white',
+set 'padding-top' and 'padding-bottom' properties to 4px */
 input:focus,
 textarea:focus {
-    background: hsla(60, 84%, 86%);
     width: 120%;
+    color: white;
+    font-size: 1.2em;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
+/* style input and textarea required on focus 
+if it's valid  with background-color blue #4f4df2 */
 input:required:focus:valid,
 textarea:required:focus:valid {
-    /* background: #076f19; */
     background: #4f4df2;
-    width: 120%;
-    color: white;
-    font-size: 1.2em;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
+/* style input and textarea on focus 
+if it's invalid  with background-color pink #ff00bb */
 input:focus:invalid,
 textarea:focus:invalid {
-    /* background: #aa1a1a; */
     background: #ff00bb;
-    color: white;
-    font-size: 1.2em;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
-textarea:required:focus:valid,
-textarea:focus:invalid {
-    font-size: 1.5em;
-}
-
+/* shift section with class 'owner' to the left with padding set to 4.5 em */
 .owner {
     padding-left: 4.5em;
 }
 
+/* adjust section with class 'contact-section' 
+relative position with property 'top' set to .5em */
 .contact-section {
     position: relative;
     top: .5em;
 }
 
+/* style form button */
 form button {
     width: 30%;
     font-weight: bold;
     font-size: 1.1em;
     background-image: linear-gradient(#e2d5c7, white, #b4845c);
     padding: .8em 0;
-    border-left: 1px solid #b4845c;
     border: none;
 }
 
+/* change style of the form button on hover*/
 form button:hover {
     box-sizing: border-box;
     background-image: linear-gradient(#b4845c, #6b2f2f, #e2d5c7);
     color: white;
-    /* font-size: 1.5em;
-    padding: .32em 0;
-    border: 3px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #ed62c8, #4f4df2); */
 }
 
+/* add visual underlay for the footer paragraph <p>,
+add padding 2em */
 footer p {
     background: hsl(0, 0%, 20%, .1);
     padding: 2em;
 }
 
+/* set padding of the footer to 0 */
 footer.site-footer {
     padding: 0;
+}
+
+/* update skip-links style */
+
+/* add property 'position' to block with class 'skip-links' and set it to 'relative' */
+.skip-links {
+    position: relative;
+}
+
+/* style links, center them horizontally */
+.skip-links a {
+    /* top: 5em; */
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: hsl(0, 0%, 25%, .9);
+    color: hsl(0, 0%, 100%, .7);
+    padding: .05em 13%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+/* style links on focus */
+.skip-links a:focus {
+    outline: none;
+    transition-delay: .4s;
 }
